@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="real_estate_properties_action" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="books_action" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="estate_property_type_action" model="ir.actions.act_window">
+        <field name="name">Property Type</field>
+        <field name="res_model">estate.property.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!--<menuitem id="menu_real_estate_root" name="Real Estate">
+        <menuitem id="menu_real_estate_advertisments" name="Advertisements">
+            <menuitem id="menu_real_estate_action" action="real_estate_properties_action"/>
+        </menuitem>
+    </menuitem>
+
+    <menuitem id="menu_real_estate_book" name="Book " parent="menu_real_estate_root">
+        <menuitem id="menu_real_estate_book_menu" name="Books">
+            <menuitem id="menu_real_estate_book_action" parent="menu_real_estate_book_menu" action="book_action"/>
+
+        </menuitem>
+    </menuitem>-->
+    <menuitem sequence="0" id="menu_real_estate_root" name="Real Estate"/>
+    <menuitem id="menu_real_estate_root_m" parent="menu_real_estate_root" name="Estate"/>
+    <menuitem id="menu_real_estate_advertisments" parent="menu_real_estate_root_m" name="Advertisements"
+              action="real_estate_properties_action"/>
+    <menuitem id="menu_real_estate_book" parent="menu_real_estate_root" name="Book"/>
+    <menuitem id="menu_real_estate_book_menu" parent="menu_real_estate_book" name="Author" action="books_action"/>
+
+    <menuitem id="menu_real_estate_property_type" name="Settings" parent="menu_real_estate_root"/>
+    <menuitem id="menu_real_estate_property_type_action" parent="menu_real_estate_property_type" name="Property Type"
+              action="estate_property_type_action"/>
+
+
+</odoo>
