@@ -22,6 +22,7 @@ class BookCategory(models.Model):
 class BookDepartment(models.Model):
     _name = 'books.department'
     _description = 'Book Department'
+    
 
     name = fields.Char()
 

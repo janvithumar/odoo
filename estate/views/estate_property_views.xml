@@ -23,6 +23,7 @@
 
                             <field name="name"/>
                             <field name="property_type_id"/>
+                            <field name="test_id"/>
                             <field name="image" widget="image" class="oe_avatar"/>
 
                         </h1>
@@ -63,6 +64,12 @@
                                 <group>
                                     <field name="garden_orientation"/>
                                 </group>
+                            </group>
+                        </page>
+                        <page string="Other Info">
+                            <group>
+                                <field name="salesman_id"/>
+                                <field name="buyer_id"/>
                             </group>
                         </page>
                     </notebook>

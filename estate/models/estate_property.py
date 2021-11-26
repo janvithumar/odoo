@@ -1,6 +1,14 @@
 from odoo import models, fields
 
 
+class Test(models.Model):
+    _name = 'test'
+    _description = 'Test'
+
+    data = fields.Char()
+    pincode = fields.Integer()
+
+
 class EstatePropertyType(models.Model):
     _name = 'estate.property.type'
     _description = 'Estate Property Type'
@@ -31,3 +39,6 @@ class EstateProperty(models.Model):
     active = fields.Boolean(default=True)
     image = fields.Image()
     property_type_id = fields.Many2one('estate.property.type')
+    salesman_id = fields.Many2one('res.users')
+    buyer_id = fields.Many2one('res.partner')
+    test_id=fields.Many2one('test')
